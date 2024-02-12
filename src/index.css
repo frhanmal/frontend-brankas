@@ -362,40 +362,8 @@ b {
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-  .judul {
-    font-size: 24px;
-    margin-top: 20px;
-  }
-
-  .judul2 {
-    font-size: 16px;
-  }
-
-  .form-control {
-    font-size: 12px;
-  }
-
-  .labelform {
-    font-size: 12px;
-  }
-
-  .tampilanhome,
-  .tampilanadmin,
-  .pengaduan,
-  .tambahkeluhan {
-    margin-top: 10px;
-    padding: 10px;
-  }
-
-  .pengaduan,
-  .tambahkeluhan {
-    font-size: 14px;
-  }
-
-  .jdltambahkeluhan {
-    font-size: 18px;
-  }
+.react-datepicker-wrapper input {
+  cursor: pointer;
 }
 
 .img-scooter {
