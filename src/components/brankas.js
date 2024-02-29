@@ -10,6 +10,7 @@ function TestBrankas() {
       <div className="tampilanhome mb-5">
         <DataTabel />
         <RiwayatPin />
+        <DataAll />
         
       </div>
     </Container>
