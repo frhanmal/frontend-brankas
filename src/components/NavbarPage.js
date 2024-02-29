@@ -15,8 +15,6 @@ const NavbarPage = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto right">
             <Nav.Link href="/home">Data</Nav.Link>
-            <Nav.Link href="/tampilangrafik">Grafik</Nav.Link>
-            <Nav.Link href="/tampilanhari">Filter</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
