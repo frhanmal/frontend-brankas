@@ -8,12 +8,12 @@ function TestBrankas() {
 
   return (
     <Container>
-      <h1 className="judul text-center">LockSmart Secure</h1>
-
+      <h1 className="judul text-center" style={{ color: 'black' }}>LOCK SMART SECURE</h1>
+  
       <div className="tampilanhome mb-5">
         {/* Tampilkan gambar status pintu */}
         <img src={statusPintu === "Pintu Tertutup" ? "gambar_pintu_tertutup.png" : "gambar_pintu_terbuka.png"} alt="Status Pintu" />
-
+  
         {/* Tampilkan teks status pintu */}
         <p className="status-pintu text-center">{statusPintu}</p>
       </div>
@@ -50,6 +50,7 @@ export function DataTabel() {
     <Row className="justify-content-md-center">
       <div class="product-catagories-wrapper pt-3">
         <Container>
+        <h1 className="judul text-center" style={{ color: 'black', marginTop:'0', marginBottom:'20' }}>STATUS BRANKAS</h1>
           <div class="product-catagory-wrap">
             <Container>
               <Card className="mb-3 catagory-card">
@@ -193,6 +194,7 @@ export function RiwayatPin() {
     <Row className="justify-content-md-center">
       <div class="product-catagories-wrapper pt-3">
         <Container>
+        <h1 className="judul text-center" style={{ color: 'black', marginTop:'0', marginBottom:'20' }}>RIWAYAT PIN</h1>
           <div class="product-catagory-wrap">
             <Container>
               <Card className="mb-3 catagory-card">
@@ -261,6 +263,7 @@ export function DataEnkripsi() {
     <Row className="justify-content-md-center">
       <div class="product-catagories-wrapper pt-3">
         <Container>
+        <h1 className="judul text-center" style={{ color: 'black', marginTop:'0', marginBottom:'20' }}>DATA ENKRIPSI</h1>
           <div class="product-catagory-wrap">
             <Container>
               <Card className="mb-3 catagory-card">
