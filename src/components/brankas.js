@@ -4,7 +4,7 @@ import { Card, Container, Row } from "react-bootstrap";
 
 function TestBrankas() {
   // Simpan status pintu (contoh: "Pintu Tertutup" atau "Pintu Terbuka") dalam variabel
-  const statusPintu = "Pintu Terbuka/Pintu Tertutup";  // Gantilah dengan status pintu yang sesuai
+  const statusPintu = "Pintu Brankas Terbuka/Pintu Brankas Tertutup";  // Gantilah dengan status pintu yang sesuai
 
   return (
     <Container>
