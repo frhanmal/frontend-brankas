@@ -6,19 +6,22 @@ import Nav from "react-bootstrap/Nav";
 
 const NavbarPage = () => {
   return (
-    <Navbar expand="lg">
+    <div className="mb-4">
       <Container>
-        <Navbar.Brand href="">
-          <Nav.Link href="/home">Home</Nav.Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto right">
-            <Nav.Link href="/home">Data</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+      <div className="welcome-text">Welcome, Farhan</div>
+        <Navbar expand="lg">
+          <Navbar.Brand href="/">Home</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="/riwayat-status-brankas">Status Brankas</Nav.Link>
+              <Nav.Link href="/riwayat-pin">Riwayat PIN</Nav.Link>
+              <Nav.Link href="/data-enkripsi">Data Enkripsi</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </Container>
-    </Navbar>
+    </div>
   );
 };
 

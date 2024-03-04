@@ -6,7 +6,8 @@
 
 body {
   margin: 0;
-  background-image: url("./assets/background.png");
+  /* background-image: url("./assets/background.png"); */
+  /* background-image: url("./assets/pemandangan.jpeg"); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,6 +17,24 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.ms-auto{
+  margin-left: 5000px;
+}
+
+.mb-4 {
+  margin-bottom: 10px;
+  max-width: 2000px;
+}
+
+/* Gaya untuk kalimat welcome di pojok kiri atas */
+.welcome-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 0px;
 }
 
 .wrapper {
