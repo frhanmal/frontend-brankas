@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Card, Container, Row } from "react-bootstrap";
+import { Table, Card, Container, Row } from "react-bootstrap";
 
 function TampilanHome() {
   // Simpan status pintu (contoh: "Pintu Tertutup" atau "Pintu Terbuka") dalam variabel
@@ -156,17 +156,18 @@ export function DataAll() {
 }
 
 export function RiwayatPin() {
-  const [sensorData, setSensorData] = useState([]);
+    const [sensorData, setSensorData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://server-brankas.vercel.app/api/data/getDataAll"
+          // 'https://server-brankas.vercel.app/api/data/getDataAll'
+          'https://server-brankas.vercel.app/api/riwayatpin/getRiwayatPin'
         );
         setSensorData(response.data);
       } catch (error) {
-        console.error("Error fetching sensor data:", error);
+        console.error('Error fetching sensor data:', error);
       }
     };
 
@@ -181,14 +182,17 @@ export function RiwayatPin() {
     <Row className="justify-content-md-center">
       <div class="product-catagories-wrapper pt-3">
         <Container>
-        <h1 className="judul text-center" style={{ color: 'black', marginTop:'0', marginBottom:'20' }}>RIWAYAT PIN</h1>
+          <h1
+            className="judul text-center"
+            style={{ color: 'black', marginTop: '0', marginBottom: '20' }}
+          >
+            RIWAYAT PIN
+          </h1>
           <div class="product-catagory-wrap">
             <Container>
               <Card className="mb-3 catagory-card">
-                <table className="table">
+                <Table responsive>
                   <thead>
-
-                  {/* Gambar ketika pintu terbuka/ tertutup */}
                     <tr>
                       <th scope="col">No</th>
                       <th scope="col">PIN Lama</th>
@@ -205,12 +209,12 @@ export function RiwayatPin() {
                         <td>
                           {data.createdAt !== null
                             ? new Date(data.createdAt).toLocaleString()
-                            : "N/A"}
+                            : 'N/A'}
                         </td>
                       </tr>
                     ))}
                   </tbody>
-                </table>
+                </Table>
               </Card>
             </Container>
           </div>
