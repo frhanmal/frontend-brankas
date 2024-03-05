@@ -7,6 +7,8 @@ import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TestBrankas, { DataAll, DataEnkripsi, DataTabel, RiwayatPin } from "./components/brankas";
 import NavbarPage from "./components/NavbarPage";
+import TampilanHome from "./components/brankas";
+
 
 
 function App() {
@@ -15,8 +17,7 @@ function App() {
       <BrowserRouter>
         <NavbarPage />
         <Routes>
-          {/* <Route path="/data-all" element={<DataAll/>} /> */}
-          <Route path="/" element={<TestBrankas/>} />
+          <Route path="/" element={<TampilanHome/>} />
           <Route path="/riwayat-pin" element={<RiwayatPin/>} />
           <Route path="/riwayat-status-brankas" element={<DataTabel/>} />
           <Route path="/data-enkripsi" element={<DataEnkripsi/>} />

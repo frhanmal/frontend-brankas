@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card, Container, Row } from "react-bootstrap";
 
-function TestBrankas() {
+function TampilanHome() {
   // Simpan status pintu (contoh: "Pintu Tertutup" atau "Pintu Terbuka") dalam variabel
   const statusPintu = "Pintu Brankas Terbuka/Pintu Brankas Tertutup";  // Gantilah dengan status pintu yang sesuai
 
@@ -21,7 +21,7 @@ function TestBrankas() {
   );
 }
 
-export default TestBrankas;
+export default TampilanHome;
 
 export function DataTabel() {
   const [sensorData, setSensorData] = useState([]);
@@ -30,7 +30,6 @@ export function DataTabel() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          // "https://grafik-sensor.vercel.app/api/sensors/getDataSensor"
           "https://server-brankas.vercel.app/api/data/getDataAll"
         );
         setSensorData(response.data);
@@ -61,10 +60,6 @@ export function DataTabel() {
                     <tr>
                       <th scope="col">No</th>
                       <th scope="col">Status</th>
-                      {/* <th scope="col">Teks</th>
-                      <th scope="col">Enkripsi</th> */}
-                      {/* <th scope="col">Deksripsi</th> */}
-                      {/* <th scope="col">Riwayat</th> */}
                       <th scope="col">Tanggal</th>
                     </tr>
                   </thead>
@@ -73,10 +68,6 @@ export function DataTabel() {
                       <tr key={index}>
                         <td>{index + 1}</td>
                         <td>{data.status_pintu}</td>
-                        {/* <td>{data.teks_asli}</td>
-                        <td>{data.encryptedText}</td> */}
-                        {/* <td>{data.teks_dekripsi}</td> */}
-                        {/* <td>{data.riwayat_pin}</td> */}
                         <td>
                           {data.createdAt !== null
                             ? new Date(data.createdAt).toLocaleString()
@@ -132,7 +123,6 @@ export function DataAll() {
                     <tr>
                       <th scope="col">No</th>
                       <th scope="col">Status</th>
-                      {/* <th scope="col">Teks</th> */}
                       <th scope="col">PIN Lama</th>
                       <th scope="col">PIN Baru</th>
                       <th scope="col">Tanggal</th>
@@ -143,12 +133,10 @@ export function DataAll() {
                       <tr key={index}>
                         <td>{index + 1}</td>
                         <td>{data.status_pintu}</td>
-                        {/* <td>{data.teks_asli}</td> */}
                         <td>{data.encryptedText}</td>
                         <td>{data.teks_dekripsi}</td>
                         <td>{data.teks_dekripsi}</td>
                         <td>{data.teks_dekripsi}</td>
-                        {/* <td>{data.riwayat_pin}</td> */}
                         <td>
                           {data.createdAt !== null
                             ? new Date(data.createdAt).toLocaleString()
@@ -174,8 +162,7 @@ export function RiwayatPin() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          // "https://grafik-sensor.vercel.app/api/sensors/getDataSensor"
-          // "https://server-brankas.vercel.app/api/data/getDataAll"
+          "https://server-brankas.vercel.app/api/data/getDataAll"
         );
         setSensorData(response.data);
       } catch (error) {
@@ -213,11 +200,8 @@ export function RiwayatPin() {
                     {sensorData.map((data, index) => (
                       <tr key={index}>
                         <td>{index + 1}</td>
-                        {/* <td>{data.status_pintu}</td> */}
-                        {/* <td>{data.teks_asli}</td>
-                        <td>{data.encryptedText}</td> */}
-                        {/* <td>{data.teks_dekripsi}</td> */}
-                        {/* <td>{data.riwayat_pin}</td> */}
+                        <td>{data.pin_lama}</td>
+                        <td>{data.pin_baru}</td>
                         <td>
                           {data.createdAt !== null
                             ? new Date(data.createdAt).toLocaleString()
@@ -243,8 +227,7 @@ export function DataEnkripsi() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          // "https://grafik-sensor.vercel.app/api/sensors/getDataSensor"
-          // "https://server-brankas.vercel.app/api/data/getDataAll"
+          "https://server-brankas.vercel.app/api/data/getDataAll"
         );
         setSensorData(response.data);
       } catch (error) {
@@ -283,11 +266,9 @@ export function DataEnkripsi() {
                     {sensorData.map((data, index) => (
                       <tr key={index}>
                         <td>{index + 1}</td>
-                        <td>{data.status_pintu}</td>
-                        {/* <td>{data.teks_asli}</td>
-                        <td>{data.encryptedText}</td> */}
-                        {/* <td>{data.teks_dekripsi}</td> */}
-                        {/* <td>{data.riwayat_pin}</td> */}
+                        <td>{data.teks_enkripsi}</td>
+                        <td>{data.teks_enkripsi_sebelum}</td>
+                        <td>{data.teks_enkripsi_sesudah}</td>
                         <td>
                           {data.createdAt !== null
                             ? new Date(data.createdAt).toLocaleString()
