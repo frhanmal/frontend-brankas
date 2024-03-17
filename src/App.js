@@ -5,7 +5,7 @@
 import React from "react";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import TestBrankas, { DataAll, DataEnkripsi, DataTabel, RiwayatPin } from "./components/brankas";
+import TestBrankas, { DataAll, DataEnkripsi, DataFilter, DataTabel, RiwayatPin } from "./components/brankas";
 import NavbarPage from "./components/NavbarPage";
 import TampilanHome from "./components/brankas";
 
@@ -17,10 +17,11 @@ function App() {
       <BrowserRouter>
         <NavbarPage />
         <Routes>
-          <Route path="/" element={<TampilanHome/>} />
+          <Route path="/home" element={<TampilanHome/>} />
           <Route path="/riwayat-pin" element={<RiwayatPin/>} />
-          <Route path="/riwayat-status-brankas" element={<DataTabel/>} />
-          <Route path="/data-enkripsi" element={<DataEnkripsi/>} />
+          <Route path="/riwayat-status-brankas" element={<DataFilter/>} />
+          {/* <Route path="/data-enkripsi" element={<DataEnkripsi/>} /> */}
+          {/* <Route path="/data-filter" element={<DataFilter/>} /> */}
         </Routes>
       </BrowserRouter>
     </div>
