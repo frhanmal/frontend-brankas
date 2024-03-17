@@ -17,6 +17,7 @@ function App() {
       <BrowserRouter>
         <NavbarPage />
         <Routes>
+          <Route path="/" element={<TampilanHome/>} />
           <Route path="/home" element={<TampilanHome/>} />
           <Route path="/riwayat-pin" element={<RiwayatPin/>} />
           <Route path="/riwayat-status-brankas" element={<DataFilter/>} />
