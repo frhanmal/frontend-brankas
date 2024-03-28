@@ -7,9 +7,13 @@
 body {
   margin: 0;
   /* background-image: url("./assets/background.png"); */
-  /* background-image: url("./assets/pemandangan.jpeg"); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.btnlogin:hover {
+  background-color: #5f6267; /* Warna latar belakang saat dihover */
+  color: white; /* Warna teks saat dihover */
 }
 
 .welcome-page {
@@ -90,7 +94,7 @@ h1 {
 }
 
 .button:hover {
-  background-color: #2980b9;
+  background-color: #91639d;
   text-decoration: none;
   color: white;
 }
@@ -106,6 +110,14 @@ h1 {
   margin: 5px;
   color: white;
 }
+
+.cardmodal .form-control {
+
+  border: 1px solid #c4c1c1; /* Ubah gaya border input */
+  padding: 8px; /* Ubah padding input */
+  background-color: #fff; /* Ubah warna latar belakang input */
+}
+
 .angkas {
   font-size: 25px;
   font-weight: bold;
@@ -215,7 +227,7 @@ b {
 }
 
 .btnlogin {
-  background-color: #10bca0;
+  background-color: #303131;
   color: white;
   border: none;
   border-radius: 10px 15px 10px 20px;
@@ -239,7 +251,7 @@ b {
 }
 
 .selesaiorder {
-  background-color: #02a0fc;
+  background-color: #d6d6d6;
 }
 
 .tolakkeluhan {
@@ -393,6 +405,6 @@ b {
 }
 
 .text-danger {
-  font-size: 8px;
+  font-size: 12px;
   margin-left: 10px;
 }
