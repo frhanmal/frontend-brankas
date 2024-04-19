@@ -32,15 +32,6 @@ body {
   max-width: 2000px;
 }
 
-/* Gaya untuk kalimat welcome di pojok kiri atas */
-.welcome-text {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  margin-left: 14px;
-}
-
 .wrapper {
   box-shadow: rgba(0, 0, 0, 0.99) 0px 5px 15px;
   background-color: #fff;
@@ -50,23 +41,9 @@ body {
   margin: 10px;
 }
 
-.logo-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.logo {
-  width: 150px;
-  height: 150px;
-}
-
 h2 {
   font-size: 24px;
   margin-bottom: 10px;
-}
-
-.msk {
-  margin: 20px;
 }
 
 h1 {
@@ -118,34 +95,6 @@ h1 {
   background-color: #fff; /* Ubah warna latar belakang input */
 }
 
-.angkas {
-  font-size: 25px;
-  font-weight: bold;
-}
-.laporanmasuk {
-  background-color: #02a0fc;
-}
-
-.laporanditerima {
-  background-color: #fec400;
-}
-
-.laporanditolak {
-  background-color: #f12b2c;
-}
-
-.laporanselesai {
-  background-color: #14bd96;
-}
-
-.laporanpending {
-  background-color: #696969;
-}
-
-.img-logo {
-  width: 50px;
-}
-
 p {
   font-size: 15px;
 }
@@ -160,31 +109,6 @@ select {
   box-shadow: none;
   margin-top: 10px;
   border: 1px solid black;
-}
-
-.appr {
-  border-radius: 4px;
-  margin-top: 5px;
-}
-
-.hist-jdl {
-  color: #152c5b;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-b {
-  color: #152c5b;
-}
-
-.tabes {
-  background-color: tomato;
-}
-
-.desk {
-  color: #219653;
-  margin-top: 10px;
-  text-align: center;
 }
 
 .btn1 {

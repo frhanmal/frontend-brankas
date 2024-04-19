@@ -13,6 +13,7 @@ import TampilanHome from "./components/tampilanHome.js";
 import RiwayatPin from "./components/tampilanRiwayatPin.js";
 import DataFilter from "./components/tampilanDataFilter.js";
 import "./index.css";
+import DataAll from "./components/tampilanDataAll.js";
 
 
 

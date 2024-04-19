@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 // import { Card, Container, Row, Table } from "react-bootstrap";
-import {Container} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Swal from "sweetalert2";
 import terbuka from "../assets/img/terbuka.jpeg";
 import tertutup from "../assets/img/tertutup.jpeg";
@@ -15,10 +15,10 @@ function TampilanHome() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://server-brankas.vercel.app/api/data/getDataAll"
+          "https://server-brankas.vercel.app/api/data/getNewData"
         );
         const latestStatusPintu =
-          response.data.length > 0 ? response.data[0].status_pintu : "";
+          response.data.length > 0 ? response.data[0].teks_dekripsi : "";
         setStatusPintu(latestStatusPintu);
         setGambarStatusPintu(
           latestStatusPintu === "PINTU BRANKAS TERBUKA" ? terbuka : tertutup

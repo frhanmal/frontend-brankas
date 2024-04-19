@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card, Container, Row, Table } from "react-bootstrap";
-import Swal from "sweetalert2";
 import terbuka from "../assets/img/terbuka.jpeg";
 import tertutup from "../assets/img/tertutup.jpeg";
 
@@ -13,11 +12,11 @@ function DataFilter() {
       const fetchData = async () => {
         try {
           const response = await axios.get(
-            "https://server-brankas.vercel.app/api/data/getDataAll"
+            "https://server-brankas.vercel.app/api/data/getNewData"
           );
           setSensorData(response.data);
           setStatusPintu(
-            response.data.length > 0 ? response.data[0].status_pintu : ""
+            response.data.length > 0 ? response.data[0].teks_dekripsi : "" 
           );
         } catch (error) {
           console.error("Error fetching sensor data:", error);
@@ -28,10 +27,11 @@ function DataFilter() {
   
     }, []);
   
+
+
    const handleFilter = (filter) => {
      setStatusPintu(filter);
    };
-  
   
     return (
       <Row className="justify-content-md-center">
@@ -39,17 +39,25 @@ function DataFilter() {
           <Container>
             <h1
               className="judul text-center"
-              style={{ color: "black", marginTop: "0", marginBottom: "20", fontSize: "30px" }}
+              style={{
+                color: "black",
+                marginTop: "0",
+                marginBottom: "20",
+                fontSize: "30px",
+              }}
             >
-             RIWAYAT STATUS BRANKAS
+              RIWAYAT STATUS BRANKAS
             </h1>
             <div class="product-catagory-wrap">
               <Container>
                 <div
                   className="mb-3"
-                  style={{ display: "flex",width: "50%", alignItems: "center" }}
+                  style={{
+                    display: "flex",
+                    width: "50%",
+                    alignItems: "center",
+                  }}
                 >
-                
                   <select
                     className="form-select"
                     id="filterStatusPintu"
@@ -61,7 +69,7 @@ function DataFilter() {
                     <option value="PINTU BRANKAS TERTUTUP">Tertutup</option>
                   </select>
                 </div>
-  
+
                 <Card className="mb-3 catagory-card">
                   <Table responsive bordered>
                     <thead>
@@ -83,18 +91,22 @@ function DataFilter() {
                         </th>
                       </tr>
                     </thead>
+                    ``
                     <tbody>
                       {sensorData.map(
                         (data, index) =>
                           (statusPintu === "" ||
-                            data.status_pintu === statusPintu) && (
+                            data.teks_dekripsi === statusPintu) && (
                             <tr key={index}>
-                              <td style={{ textAlign: "center" }}>{index + 1}</td>
-                              <td>{data.status_pintu}</td>
+                              <td style={{ textAlign: "center" }}>
+                                {index + 1}
+                              </td>
+                              <td>{data.teks_dekripsi}</td>
                               <td style={{ textAlign: "center" }}>
                                 <img
                                   src={
-                                    data.status_pintu === "PINTU BRANKAS TERBUKA"
+                                    data.teks_dekripsi ===
+                                    "PINTU BRANKAS TERBUKA"
                                       ? terbuka
                                       : tertutup
                                   }

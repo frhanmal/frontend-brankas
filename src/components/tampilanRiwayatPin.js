@@ -12,7 +12,7 @@ function RiwayatPin() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'https://server-brankas.vercel.app/api/riwayatpin/getRiwayatPin'
+          "https://server-brankas.vercel.app/api/riwayatpin/getPIN"
         );
         setSensorData(response.data);
       } catch (error) {
