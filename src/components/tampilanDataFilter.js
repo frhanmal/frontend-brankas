@@ -91,7 +91,6 @@ function DataFilter() {
                         </th>
                       </tr>
                     </thead>
-                    ``
                     <tbody>
                       {sensorData.map(
                         (data, index) =>
