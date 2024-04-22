@@ -15,17 +15,15 @@ function DataFilter() {
             "https://server-brankas.vercel.app/api/data/getNewData"
           );
           setSensorData(response.data);
-          setStatusPintu(
-            response.data.length > 0 ? response.data[0].teks_dekripsi : "" 
-          );
+          setStatusPintu(response.data.length > 0 ? "" : response.data[0].teks_dekripsi);
         } catch (error) {
           console.error("Error fetching sensor data:", error);
         }
       };
-  
+    
       fetchData();
-  
     }, []);
+    
   
 
 
