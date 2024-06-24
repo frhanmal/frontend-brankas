@@ -57,7 +57,7 @@ function RiwayatPin() {
             className="judul text-center"
             style={{ color: 'black', marginTop: '0', marginBottom: '20', fontSize: "30px" }}
           >
-            RIWAYAT PERUBAHAN PIN
+            RIWAYAT PIN
           </h1>
           <div class="product-catagory-wrap">
             <Container>
@@ -67,23 +67,28 @@ function RiwayatPin() {
                   <thead>
                     <tr>
                       <th scope="col" style={{ width: '20px' }}>No</th>
-
-                      <th scope="col">PIN Lama</th>
-                      <th scope="col">PIN Baru</th>
-                      <th scope="col">Tanggal</th>
+                      <th scope="col" style={{ textAlign: "center" }}>
+                          PIN Lama
+                        </th>
+                        <th scope="col" style={{ textAlign: "center" }}>
+                          PIN Baru
+                        </th>
+                        <th scope="col" style={{ textAlign: "center" }}>
+                          Tanggal
+                        </th>
                     </tr>
                   </thead>
                   <tbody>
                     {sensorData.map((data, index) => (
                       <tr key={index}>
                         <td  style={{ textAlign: 'center' }}>{index + 1}</td>
-                        <td>{data.pin_lama}</td>
-                        <td>{data.pin_baru}</td>
-                        <td>
-                          {data.createdAt !== null
-                            ? new Date(data.createdAt).toLocaleString()
-                            : 'N/A'}
-                        </td>
+                        <td style={{ textAlign: "center" }}>{data.pin_lama}</td>
+                        <td style={{ textAlign: "center" }}>{data.pin_baru}</td>
+                        <td style={{ textAlign: "center" }}>
+                            {data.createdAt !== null
+                            ? `${new Date(data.createdAt).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}, ${new Date(data.createdAt).toLocaleDateString()}`
+                            : "N/A"}
+                       </td>
                       </tr>
                     ))}
                   </tbody>

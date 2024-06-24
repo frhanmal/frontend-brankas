@@ -131,9 +131,9 @@ function DataFilter() {
                                 />
                               </td>
                               <td style={{ textAlign: "center" }}>
-                                {data.createdAt !== null
-                                  ? new Date(data.createdAt).toLocaleString()
-                                  : "N/A"}
+                                    {data.createdAt !== null
+                                      ? `${new Date(data.createdAt).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}, ${new Date(data.createdAt).toLocaleDateString()}`
+                                      : "N/A"}
                               </td>
                             </tr>
                           )
