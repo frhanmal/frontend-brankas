@@ -57,7 +57,7 @@ function RiwayatPin() {
             className="judul text-center"
             style={{ color: 'black', marginTop: '0', marginBottom: '20', fontSize: "30px" }}
           >
-            RIWAYAT PIN
+            RIWAYAT PERUBAHAN PIN
           </h1>
           <div class="product-catagory-wrap">
             <Container>

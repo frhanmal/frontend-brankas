@@ -65,7 +65,7 @@ function Register() {
       setCPassword("");
       console.log(result);
       Swal.fire("Selamat", "Registrasi Berhasil", "success").then((result) => {
-        window.location.href = "/login";
+        window.location.href = "/";
       });
     } catch (error) {
       Swal.fire("Oops", "Terjadi kesalahan", "error");

@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  /* background-image: url("./assets/background.png"); */
+  /* background-image: url("./assets/bg.jpg"); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -159,35 +159,6 @@ select {
   margin-top: 20px;
 }
 
-.terimakeluhan,
-.tolakkeluhan,
-.selesaiorder {
-  color: white;
-  border: none;
-  border-radius: 10px 15px 10px 20px;
-  padding: 10px;
-  width: 100px;
-  margin-top: 2vh;
-}
-
-.terimakeluhan {
-  background-color: #14bd96;
-}
-
-.selesaiorder {
-  background-color: #d6d6d6;
-}
-
-.tolakkeluhan {
-  background-color: #f12b2c;
-}
-
-.btndetail {
-  background-color: transparent;
-  border: none;
-  float: right;
-}
-
 /* home */
 
 .judul {
@@ -282,39 +253,6 @@ select {
 
 .backbutton {
   justify-content: flex-start;
-}
-
-.juduldetailpengaduan {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.alasanpenolakan {
-  font-weight: bold;
-}
-
-.pengaduan {
-  color: white;
-  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.tambahkeluhan {
-  color: white;
-  border-radius: 10px;
-}
-
-.jdltambahkeluhan {
-  flex-grow: 1;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-}
-
-.subjudul {
-  color: white;
-  margin-top: 10px;
 }
 
 .react-datepicker-wrapper input {

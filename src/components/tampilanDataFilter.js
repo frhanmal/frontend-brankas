@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import { Card, Container, Row, Table } from "react-bootstrap";
 import terbuka from "../assets/img/terbuka.jpeg";
 import tertutup from "../assets/img/tertutup.jpeg";
+import Swal from "sweetalert2";
 
 function DataFilter() {
     const [sensorData, setSensorData] = useState([]);
     const [statusPintu, setStatusPintu] = useState("");
+    const [showHomeContent, setShowHomeContent] = useState(false);
   
     useEffect(() => {
       const fetchData = async () => {
@@ -23,16 +25,33 @@ function DataFilter() {
     
       fetchData();
     }, []);
-    
-  
-
 
    const handleFilter = (filter) => {
      setStatusPintu(filter);
    };
-  
+
+   useEffect(() => {
+    const users = JSON.parse(sessionStorage.getItem("users"));
+    if (!users) {
+      Swal.fire({
+        title: "Akses Ditolak",
+        text: "Anda belum login. Silahkan login terlebih dahulu",
+        icon: "warning",
+        confirmButtonText: "OK",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = "/";
+        }
+      });
+
+      return;
+    }
+
+    setShowHomeContent(true);
+  }, []);
     return (
       <Row className="justify-content-md-center">
+        {showHomeContent && (
         <div class="product-catagories-wrapper pt-3">
           <Container>
             <h1
@@ -126,6 +145,7 @@ function DataFilter() {
             </div>
           </Container>
         </div>
+        )}
       </Row>
     );
   }

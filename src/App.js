@@ -13,7 +13,7 @@ import TampilanHome from "./components/tampilanHome.js";
 import RiwayatPin from "./components/tampilanRiwayatPin.js";
 import DataFilter from "./components/tampilanDataFilter.js";
 import "./index.css";
-import DataAll from "./components/tampilanDataAll.js";
+
 
 
 
@@ -36,8 +36,6 @@ function App() {
                   {/* <Route path="/register" element={<Register />} /> */}
                   <Route path="/riwayat-pin" element={<RiwayatPin />} />
                   <Route path="/riwayat-status-brankas" element={<DataFilter />}/>
-                  {/* <Route path="/data-enkripsi" element={<DataEnkripsi />} /> */}
-                  {/* <Route path="/data-filter" element={<DataFilter />} /> */}
                 </Routes>
               </>
             }
